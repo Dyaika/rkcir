@@ -1,0 +1,31 @@
+h2{
+    color: #365388;
+}
+a{
+    text-decoration: none;
+
+}
+.buy{
+    font-size: 60px;
+    color: white;
+    background-color: #365388;
+    margin-left: 100px;
+}
+.buy-button {
+    background-color: #a5b4cf
+ }
+ nav {
+    background-color: white;
+    border-style: solid;
+    border-color: #0073e6;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    
+    border-radius: 7px;
+ }
+ nav ul li{
+    background-color: #0073e6;
+    display: inline;
+    padding: 13px;
+    border-radius: 9px;
+ }
