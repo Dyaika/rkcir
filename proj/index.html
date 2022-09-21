@@ -8,33 +8,37 @@
     <title>FumoFumo Store</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+    </style> 
 </head>
 <body>
 <header>
     <h1 id="storeName">
         <a href="index.html"><img src="fumofumostorelogo2.png" height="100"></a>
     </h1>
-    <hr>
-<aside>
-    <nav>
+    <nav id="mainMenu">
     <ul>
-        <li><a href="#productSection">Товар</a></li>
+        <li class="left"><a href="index.html">Главная</a></li>
         <li><a href="#descriptionSection">Описание</a></li>
-        <li><a href="#infoSection">Информация о продукте</a></li>
-        <li><a href="#definitionsSection">Разъяснение терминов</a></li>
         <li><a href="#interactiveArticle">Интерактивное фото</a></li>
-        <li><a href="#contacts">Контакты</a></li>
+        <li class="right"><a href="#contacts">Контакты</a></li>
     </ul>
     </nav>
-</aside>
 </header>
+
 <main>
+    <article id="mainPartAndReviews">
+    <!--страница товара-->
+    <article id="mainPart">
     <section id="productSection">
         <h2 id="product">Игрушка плюшевая Ююко Сайгёдзи</h2>
         <table width="600">
         <tr>
             <td><a href="https://youtu.be/DdhGPdTmr2E"><img src="https://fumo.website/img/490.jpg" width="413" height="578" alt="Yuyuko Saigyoji Fumo Picture"></a></td>
-            <td><div ><a class="buy" href="https://www.gift-gift.jp/nui/nui490.html"><strong>Купить</strong></a></div></td>
+            <td><div>
+                <div class="price">4070¥</div>
+                <a class="buy" href="https://www.gift-gift.jp/nui/nui490.html"><strong>Купить</strong></a></div></td>
         </tr>
         </table>
     </section>
@@ -87,6 +91,23 @@
             <dd><blockquote cite="https://dic.academic.ru/dic.nsf/efremova/214740/%D0%9F%D0%BB%D1%8E%D1%88%D0%B5%D0%B2%D1%8B%D0%B9"> - cвойственный плюшу, характерный для него</blockquote></dd>
         </dl>
     </section>
+    </article>
+    <!--отзывы-->
+    <aside>
+        <div class="review">
+            <div class="customer_name">DoofHD:</div>
+            <div class="review_text">"Все хорошо, доставили быстро. Среди плюсов назову что шляпу действительно можно снимать. Из минусов что после этого она потерялась"</div>
+        </div>
+        <div class="review">
+            <div class="customer_name">Sentry:</div>
+            <div class="review_text">"Все плохо, не доставили. Из плюсов - шляпа не терялась"</div>
+        </div>
+        <div class="review">
+            <div class="customer_name">Leskinen A.:</div>
+            <div class="review_text">"Where shaman girls, Linthalo?"</div>
+        </div>
+    </aside>
+</article>
     <article id="interactiveArticle">
         <h3 id="interactive">Фото с интерактивными областями</h3>
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FO6TXcfbvfdo%2Fmaxresdefault.jpg&f=1&nofb=1" usemap="#shapes" alt="Фото с кучей фумо">
@@ -95,19 +116,20 @@
         <area shape="rectangle" href="https://youtu.be/O6TXcfbvfdo" coords="200,350,700,650">
         <area shape="circle" href="https://youtu.be/jQXrebxMOJQ?t=5" coords="850,160,150">
     </article>
+    
 </main>
 <footer>
     <address>
         <h3 id="contacts">Контакты</h3>
         <table width="600">
         <tr>
-            <td><a href="tel: +7 977 281 08 23">Позвонить</a></td>
-            <td><a href="mailto:razchurik@gmail.com">Написать</a></td>
+            <td><a class="contacts" href="tel: +7 977 281 08 23">Позвонить</a></td>
+            <td><a class="contacts" href="mailto:razchurik@gmail.com">Написать</a></td>
         </tr>
         </table>
     </address>
     <hr>
-    <a href="#storeName">--В начало--</a>
+    <a id="toTop" href="#storeName">--В начало--</a>
 </footer>
 </body>
 </html>
