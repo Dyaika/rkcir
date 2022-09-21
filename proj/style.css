@@ -116,6 +116,10 @@ aside{
 #toTop:visited{
     color: #3D99F3;
 }
+#errorMain{
+    min-height: 700px;
+    text-align: center;
+}
 .contacts{
     color: #fff;
     font-size: 30px;
