@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,13 +14,13 @@
 <body>
 <header>
     <h1 id="storeName">
-        <a href="error-page.html"><img src="fumofumostorelogo.png" height="100"></a>
+        <a href="error-page.html"><img src="fumofumostorelogo2.png" height="100"></a>
     </h1>
     <nav id="mainMenu">
     <ul>
         <li class="left"><a href="error-page.html">Главная</a></li>
         <li><a href="#descriptionSection">Описание</a></li>
-        <li><a href="#interactiveArticle">Интерактивное фото</a></li>
+        <li><a href="#interactiveArticle">Фото</a></li>
         <li class="right"><a href="#contacts">Контакты</a></li>
     </ul>
     </nav>
@@ -44,6 +43,8 @@
     </section>
     <section id="descriptionSection">
         <h3 id="description">Описание</h3>
+        <img class="floatingCharacter" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fes.touhouwiki.net%2Fimages%2Fthumb%2Fc%2Fc9%2FTh13Yuyuko.png%2F200px-Th13Yuyuko.png&f=1&nofb=1&ipt=3179bbe18692d3786c4538afd5cf54c42170feb1c81bb1b5e08a10a9203342e9&ipo=images" alt="Saigyo Ayakashi picture" height="180px">
+
         <p>Окунитесь в атмосферу Touhou PCB, к серии плюшевых игрушек FumoFumo присоединяется <em>Ююко Сайгёдзи</em>, принцесса призраков Хакугёро! </p>
         <p><pre>
     "Я видела зловещий сон...
@@ -94,6 +95,7 @@
     </article>
     <!--отзывы-->
     <aside>
+        <div id="reviews">
         <div class="review">
             <div class="customer_name">DoofHD:</div>
             <div class="review_text">"Все хорошо, доставили быстро. Среди плюсов назову что шляпу действительно можно снимать. Из минусов что после этого она потерялась"</div>
@@ -106,27 +108,26 @@
             <div class="customer_name">Leskinen A.:</div>
             <div class="review_text">"Where shaman girls, Linthalo?"</div>
         </div>
+        </div>
     </aside>
 </article>
     <article id="interactiveArticle">
-        <h3 id="interactive">Фото с интерактивными областями</h3>
+        <h3 id="interactive">Интерактивная область</h3>
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FO6TXcfbvfdo%2Fmaxresdefault.jpg&f=1&nofb=1" usemap="#shapes" alt="Фото с кучей фумо">
         <map name="shapes">
         <area href="https://youtu.be/5kK3ktaIQBA?t=14" shape="polygon" coords="800,200,700,550,900,550">
         <area shape="rectangle" href="https://youtu.be/O6TXcfbvfdo" coords="200,350,700,650">
         <area shape="circle" href="https://youtu.be/jQXrebxMOJQ?t=5" coords="850,160,150">
+        </map>
+        <iframe width="893" height="502" src="https://www.youtube.com/embed/3sOAkdu3tRo" title="Touhou Project ~ The Embodiment of Scarlet Devil" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <img class="fixedCharacter" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Forig07.deviantart.net%2F8834%2Ff%2F2011%2F007%2F8%2Fd%2Fyuyuko_attack_by_generalcirno-d36n1jf.gif&f=1&nofb=1&ipt=849aae1b195fdf9504fe73abe3031a79fa7055c289af42da62adc69fb6bf9ba4&ipo=images">
     </article>
-    
 </main>
 <footer>
     <address>
         <h3 id="contacts">Контакты</h3>
-        <table width="600">
-        <tr>
-            <td><a class="contacts" href="tel: +7 977 281 08 23">Позвонить</a></td>
-            <td><a class="contacts" href="mailto:razchurik@gmail.com">Написать</a></td>
-        </tr>
-        </table>
+        <a class="tel" href="tel: +7 977 281 08 23">Позвонить</a>
+        <a class="email" href="mailto:razchurik@gmail.com">Написать</a>
     </address>
     <hr>
     <a id="toTop" href="#storeName">--В начало--</a>
