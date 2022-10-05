@@ -44,7 +44,8 @@ aside{
     width: 20%;
 }
 footer {
-    /*float: left;*/
+    z-index: 2;
+    position: relative;
     min-height: 100px;
     padding: 20px;
     background: #004C95;
@@ -60,14 +61,6 @@ footer a:visited{
 
     color: #3D99F3;
 }
-table{
-    align-content: center;
-    width: 70%;
-    margin: 0 auto;
-}
-table tr td{
-    text-align: center; 
-}
 nav {
     position: relative;
     float: right;
@@ -81,18 +74,17 @@ nav {
 nav ul {
     margin:0;
     padding:0;
+    list-style-type: none;
     display:flex;
     border-radius: 10px;
 }
 nav ul li {
     line-height:60px;
-    box-sizing: border-box;
     border-width: 2px;
     border-style:dashed;
     border-color: #0075E6;
-    padding:10px;
     text-align:center;
-    display:inline-block;
+    display:inline;
     min-width: 25%;
     background-color: #0075E6;
   
@@ -104,6 +96,7 @@ nav ul li:hover{
 }
 nav ul li a {
     position:relative;
+    display: block;
     margin: 0 20px;
     color:white;
 }
@@ -129,6 +122,15 @@ address h3{
 #reviews{
     position: sticky;
     top: 0;
+}
+#purchase{
+    display: flex;
+    align-content: center;
+    margin: auto auto auto auto;
+}
+#priceAndBuy{
+    text-align: center;
+    margin: auto auto auto auto;
 }
 .tel{
     color: #fff;
@@ -194,6 +196,7 @@ address h3{
     position: fixed;
     right: 10px;
     bottom: 10px;
+    z-index: 1;
 }
 
 
