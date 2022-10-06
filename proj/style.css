@@ -97,7 +97,9 @@ nav ul li:hover{
 }
 nav ul li a {
     position:relative;
+    box-sizing: border-box;
     display: block;
+    font-weight: bold;
     margin: 0 20px;
     color:white;
 }
@@ -202,6 +204,38 @@ fieldset{
     bottom: 10px;
     z-index: 1;
 }
+
+
+form{
+    background-color:#6db0f38c;
+    padding: 2vh;
+    margin: auto auto 1vh auto;
+    width: fit-content;
+    border-radius: 15px;
+}
+button{
+    border-radius: 10px;
+    background-color: #0075E6;
+    padding: 10px 4px 10px 4px;
+    color: white;
+    font-weight: bold;
+    border-style: none;
+
+}
+button:hover{
+    background-color: #004C95;
+}
+button:active{
+    background-color: #002595;;
+}
+::placeholder{
+    font-weight: lighter;
+    color: rgba(11, 42, 73, 0.32);
+}
+input:focus{
+    background-color: aliceblue;
+}
+
 
 
 
