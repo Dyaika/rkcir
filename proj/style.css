@@ -8,6 +8,7 @@ h1{
 h2{
     color: #004C95;
     font-size: 40px;
+    text-align: center;
 }
 h3{
     color: #3D99F3;
@@ -105,6 +106,9 @@ address{
 address h3{
     color: #fff;
     text-align: left;
+}
+fieldset{
+    width: fit-content;
 }
 #contacts{
 }
