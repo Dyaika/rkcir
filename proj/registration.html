@@ -16,7 +16,9 @@
     <h1 id="storeName">
         <a href="index.html"><img src="fumofumostorelogo2.png" height="100"></a>
     </h1>
+    
     <div class="menu-btn">
+        <input name="burger_check" type="checkbox">
         <span></span>
         <span></span>
         <span></span>
@@ -41,7 +43,7 @@
         <form action="" method="get">
             <p>
                 <label for="name">Введите имя</label>
-                <input type="text" name="name" id="name" placeholder="Имя" required>
+                <input type="text" name="name" id="name" placeholder="Имя" minlength="2" maxlength="16" required>
             </p>
             <p>
                 <label for="s">Ваш пол</label>
@@ -56,11 +58,11 @@
             </p>
             <p>
                 <label for="tel">Ваш номер</label>
-                <input type="tel" name="tel" id="tel" placeholder="Телефон" required>
+                <input type="tel" name="tel" id="tel" minlength="10" maxlength="13" placeholder="Телефон" required>
             </p>
             <p>
                 <label for="password">Придумайте пароль</label>
-                <input type="password" name="password" id="password" required>
+                <input type="password" name="password" id="password" minlength="4" maxlength="20" required>
             </p>
             <p>
                 <label for="file">Ваше фото</label>
@@ -94,6 +96,9 @@
             <button type="submit" id="order">Заказать</button>
         </form>
     </section>
+    <iframe width="500" height="300" src="https://www.youtube.com/embed/AxirvCDALTA" title="How to create online registration form using google docs Forms">
+    </iframe>
+    <video width="600" height="330" src="videoplayback.mp4" controls preload="auto" poster="poster-vid.png"></video>
 </main>
 <footer>
     <address>

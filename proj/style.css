@@ -208,7 +208,7 @@ fieldset{
 .menu-btn {
     width: 30px;
     height: 30px;
-    display: grid;
+    display: none;
     left: 1vw;
     z-index:2;
     overflow: hidden;
