@@ -1,8 +1,0 @@
-@media (max-width: 900px) {
-    nav {
-        display: none;
-    }
-    .menu_btn{
-        display: grid;
-    }
-}
