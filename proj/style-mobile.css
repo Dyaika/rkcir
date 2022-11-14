@@ -49,6 +49,7 @@
     #mainMenu{
         display: block;
         position: fixed;
+        opacity: 0;
         visibility: hidden;
         top: 0;
         width: 90vw;
@@ -90,15 +91,25 @@
         transform: rotate(90deg);
     }
     #menu__toggle:checked ~ #mainMenu {
-        visibility: visible;
+        opacity: 1;
         position: relative;
         left: 0;
+    }
+    #menu__toggle:checked ~ #mainMenu ul li{
+        animation-name: appearFromNothing;
+        animation-duration: 0.25s;
+        animation-fill-mode: forwards;
     }
     #menu__toggle:checked ~ h1 {
         visibility: hidden;
         position: fixed;
     }
 
+    .menu__btn span,
+    .menu__btn span::before,
+    .menu__btn span::after {
+        transition-duration: .25s;
+    }
     #galleryH2{
         opacity: 0;
         height: 0;

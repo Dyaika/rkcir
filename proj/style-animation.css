@@ -1,0 +1,15 @@
+@keyframes appearFromNothing {
+    from{
+        visibility: hidden;
+        height: 0;
+        opacity: 0;
+    }
+    1%{
+        visibility: visible;
+    }
+    to{
+        visibility: visible;
+        height: 3em;
+        opacity: 1;
+    }
+}

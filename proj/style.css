@@ -216,7 +216,7 @@ form{
     width: fit-content;
     border-radius: 15px;
 }
-button{
+.sub1{
     border-radius: 10px;
     background-color: #0075E6;
     padding: 10px 4px 10px 4px;
@@ -225,10 +225,10 @@ button{
     border-style: none;
 
 }
-button:hover{
+.sub1:hover{
     background-color: #004C95;
 }
-button:active{
+.sub1:active{
     background-color: #002595;;
 }
 ::placeholder{
