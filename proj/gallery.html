@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +7,7 @@
     <title>FumoFumo Store</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-mobile.css">
     <link rel="stylesheet" href="gallery-style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,400&display=swap');
@@ -15,26 +15,24 @@
 </head>
 <body>
 <header>
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+        <span></span>
+    </label>
+    <nav id="mainMenu">
+        <ul>
+            <li class="left"><a href="error-page.html">Главная</a></li>
+            <li><a href="registration.html">Регистрация</a></li>
+            <li><a href="gallery.html">Фото</a></li>
+            <li class="right"><a href="#contacts">Контакты</a></li>
+        </ul>
+    </nav>
     <h1 id="storeName">
         <a href="index.html"><img src="fumofumostorelogo2.png" height="100"></a>
     </h1>
-    <div class="menu-btn">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <div class="menu">
-        <nav id="mainMenu">
-            <ul>
-                <li class="left"><a href="error-page.html">Главная</a></li>
-                <li><a href="registration.html">Регистрация</a></li>
-                <li><a href="gallery.html">Фото</a></li>
-                <li class="right"><a href="#contacts">Контакты</a></li>
-            </ul>
-        </nav>
-    </div>
 </header>
 <main>
+    <h2 id="galleryH2">Галерея</h2>
     <article class="imageGallery">
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fen.touhouwiki.net%2Fimages%2Fthumb%2Fe%2Fe8%2FANGELTYPE_InuSakuya_Plush.jpg%2F600px-ANGELTYPE_InuSakuya_Plush.jpg&f=1&nofb=1&ipt=c2b8cecaa92d4871f6236d0ac0ddfe39c5aa48b01fe86704bd55098f415fc1e0&ipo=images">
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg00.deviantart.net%2F8fc4%2Fi%2F2010%2F123%2F1%2F5%2Ftouhou_fumofumo_plushies_by_jawzy83.jpg&f=1&nofb=1&ipt=343abbd32854046e3d0c4ed01bf373771b4a22f26e80c08630308f4dbd0c685e&ipo=images">
