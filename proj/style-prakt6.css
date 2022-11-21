@@ -1,12 +1,303 @@
 #buttonsPr6{
     display: flex;
+    position: relative;
     flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    margin: auto;
 }
+
 button{
-    min-width: 10vw;
-    height: 40px;
-    margin: 10px auto 10px auto;
+    margin: 1rem auto 1rem auto;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    min-width: 8em;
+    max-width: fit-content;
+    height: 80px;
+    font-size: 2em;
+    background: rgba(238, 182, 39, 0.55);
+    border: 0.2rem solid #3498db;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
 button:hover{
+    background: rgba(236, 87, 149, 0.27);
     cursor: pointer;
+    color: #3498db;
+}
+button::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    padding: 0.85em 0.75em;
+    display: block;
+}
+
+button:nth-child(1){
+    transition-duration: 0.3s;
+}
+button:nth-child(1):hover {
+}
+button:nth-child(1)::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background: rgba(73, 201, 243, 0.27);
+    transition-duration: 0.3s;
+    transform: scale(0, 0);
+}
+button:nth-child(1):hover::after {
+    animation-name: knop1;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    transform: scale(1, 1);
+}
+
+button:nth-child(2){
+    transition-duration: 0.3s;
+}
+button:nth-child(2):hover {
+}
+button:nth-child(2)::after {
+    border-radius: 50%;
+    left: -10%;
+    right: -10%;
+    top: -140%;
+    bottom: -140%;
+    transform: scale(0, 0);
+    background: rgba(73, 201, 243, 0.27);
+    transition-duration: 0.3s;
+}
+button:nth-child(2):hover::after {
+    animation-name: knop1;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    transform: scale(1, 1);
+}
+button:nth-child(3){
+    transition-duration: 0.3s;
+}
+button:nth-child(3):hover {
+}
+button:nth-child(3)::after {
+    border-radius: 50%;
+    left: -10%;
+    right: -10%;
+    top: -140%;
+    bottom: -140%;
+    transform: skewX(45deg) scale(0, 1);
+    background: rgba(73, 201, 243, 0.27);
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+button:nth-child(3):hover::after {
+    animation-name: knop1;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    transform: skewX(45deg) scale(1.1, 1);
+}
+
+button:nth-child(4){
+    transition-duration: 0.3s;
+}
+button:nth-child(4):hover {
+}
+button:nth-child(4)::after {
+    border-radius: 50%;
+    left: -10%;
+    right: -10%;
+    top: -140%;
+    bottom: -140%;
+    transform: skewX(-0deg) scale(0, 1);
+    background: rgba(73, 201, 243, 0.27);
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+button:nth-child(4):hover::after {
+    animation-name: knop1;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    transform: skewX(-50deg) scale(1.1, 1);
+}
+
+.im3{
+    position: absolute;
+    width: 500px;
+    border-radius: 50px;
+    z-index: 1;
+}
+
+#images3{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.cont3{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 3px;
+}
+
+.cont3:nth-child(1)::before{
+    content: "зверь";
+
+    background: linear-gradient(rgba(238, 182, 39, 0.55), rgba(236, 87, 149, 0.27));
+}
+.cont3:nth-child(2)::before{
+    content: "птица";
+    background: linear-gradient(rgba(165, 217, 140, 0.55), rgba(231, 221, 24, 0.27));
+}
+.cont3:nth-child(3)::before{
+    content: "конь";
+    background: linear-gradient(rgba(39, 65, 238, 0.55), rgba(87, 195, 236, 0.27));
+}
+.cont3::before{
+    content: '';
+    display: flex;
+    color: white;
+    font-size: xx-large;
+    text-align: -moz-center;
+    justify-content: space-around;
+    position: absolute;
+    border-radius: 50px;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    opacity: 0;
+    transition-duration: 0.3s;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+}
+.cont3:hover::before{
+    opacity: 1;
+}
+
+#videoPr6{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+#videoPr6 iframe{
+    width: 85.3vw;
+    height: 48vw;
+}
+#videoPr6 div::before{
+    transition-duration: 0.3s;
+    content: '';
+    position: absolute;
+    opacity: 0;
+    background: black;
+    width: 100%;
+    height: 100%;
+}
+#videoPr6 div{
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    margin: auto;
+    transition-duration: 1s;
+
+}
+#videoPr6 h3, #videoPr6 span{
+    position: relative;
+}
+#videoPr6 h3::before{
+    position: relative;
+    margin: 10%;
+    content: "Заголовок";
+    opacity: 0;
+}
+#videoPr6 span::before{
+
+    margin: 10%;
+    position: relative;
+    color: white;
+    width: 100%;
+    content: "буквы буквы буквы буквы буквы";
+    opacity: 0;
+}
+#videoPr6:hover span::before, #videoPr6:hover h3::before, #videoPr6:hover div::before{
+    opacity: 1;
+}
+#videoPr6:hover div{
+    transform: translate(-70%, 30%);
+}
+
+#notif-count{
+    position: absolute;
+    text-align: center;
+    background-color: crimson;
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+    right: -5%;
+    top: -5%;
+}
+#notifications{
+    right: 2vw;
+    bottom: 2vw;
+    position: fixed;
+    z-index: 9999;
+    width: fit-content;
+    background: #3D99F3;
+    border-radius: 50%;
+    min-width: 5rem;
+    min-height: 5rem;
+    transition-duration: 0.3s;
+}
+#notifications:hover{
+    border-radius: 0.5rem;
+}
+#notifications::before{
+    padding: 0.5rem;
+    content: "☎";
+    font-size: 3rem;
+    background-color: #a9d7f3;
+    box-sizing: border-box;
+    position: absolute;
+    transition-duration: 0.3s;
+    width: 100%;
+    text-align: center;
+    border-radius: 30%;
+}
+#notifications:hover::before{
+    font-size: 1rem;
+    text-align: left;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+#notifications:hover ol{
+    display: block;
+    opacity: 1;
+    transition-duration: 1s;
+    transition-delay: 0.2s;
+}
+#notifications ol{
+    transition-duration: 0.3s;
+    display: none;
+    opacity: 0;
+    margin: auto;
+    padding: 2.5rem 0.5rem 0.5rem 2rem;
+    right: 0;
+}
+#notifications ol li:hover{
+    content: "";
+    cursor: pointer;
+    color: white;
+    transform: scale(1.1 ,1.1);
+}
+#notifications ol li{
+    transform: scale(1 ,1);
+    transition-duration: 0.2s;
 }
