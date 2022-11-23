@@ -71,6 +71,8 @@ cap.addEventListener('click', () => {
     }
     if (solved){
         send.style.background = 'blue';
+    } else {
+        send.style.background = "rgba(255,255,255,0.2)";
     }
 });
 
