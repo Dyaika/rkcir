@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FumoFumo Store</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-mobile.css">
+  <link rel="stylesheet" href="style-animation.css">
+  <link rel="stylesheet" href="style-prakt10.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+  </style>
+</head>
+<body>
+<header>
+  <input id="menu__toggle" type="checkbox" />
+  <label class="menu__btn" for="menu__toggle">
+    <span></span>
+  </label>
+  <nav id="mainMenu">
+    <ul>
+      <li class="left"><a href="error-page.html">Главная</a></li>
+      <li><a href="registration.html">Регистрация</a></li>
+      <li><a href="gallery.html">Фото</a></li>
+      <li class="right"><a href="#contacts">Контакты</a></li>
+    </ul>
+  </nav>
+  <h1 id="storeName">
+    <a href="index.html"><img src="fumofumostorelogo2.png" height="100px"></a>
+  </h1>
+</header>
+
+<main>
+  <h2>Практика 10</h2>
+  <!-- ФОРМА-->
+  <form action="">
+    <h3>Вход</h3>
+    <input type="text" name="" id="login" placeholder="Логин" required>
+    <input type="password" name="" id="password" placeholder="Пароль" required>
+    </br>
+    <div>
+      <label for="cap">Я не робот</label>
+      <input id="cap" type="checkbox" required>
+    </div>
+
+    <input type="submit" value="Отправить" id="submit">
+  </form>
+  <!--КОРЗИНА-->
+  <section id="cart">
+    <h3>Товары</h3>
+    <div id="goods">
+      <button id="new_good">Новый товар</button>
+    </div>
+    <h3>Корзина</h3>
+    <div id="in_cart">
+      <div id="storage">
+
+      </div>
+    </div>
+    <div id="result">
+      Итого: <span id="sum">0</span>₽
+    </div>
+
+  </section>
+</main>
+<script src="./script-prakt10.js"></script>
+<footer>
+  <address>
+    <h3 id="contacts">Контакты</h3>
+    <a class="tel" href="tel: +7 977 281 08 23">Позвонить</a>
+    <a class="email" href="mailto:razchurik@gmail.com">Написать</a>
+  </address>
+  <hr>
+  <a id="toTop" href="#storeName">--В начало--</a>
+</footer>
+</body>
+</html>
