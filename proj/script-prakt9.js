@@ -7,15 +7,27 @@ do {
 }
 while (!reg_ask)
 
-let login = prompt("Введите ваш логин:");
-if (login == null) alert('Отменено');
-else if (login !== 'Админ') alert('Я вас не знаю');
-else {
-    let password = prompt("Введите ваш пароль:");
-    if (password === 'Я главный') alert("Здравствуйте!");
-    else if (password !== null) alert("Неверный пароль");
-    else alert("Отменено");
-}
+let is_admin = false;
+do{
+    let login = prompt("Введите ваш логин:");
+    if (login == null){
+        alert('Отменено');
+    } else if (login !== 'Админ'){
+        alert('Я вас не знаю');
+    } else {
+        do{
+            let password = prompt("Введите ваш пароль:");
+            if (password === 'Я главный') {
+                alert("Здравствуйте!");
+                is_admin = true;
+            } else if (password !== null){
+                alert("Неверный пароль");
+            } else {
+                alert("Отменено");
+            }
+        } while (!is_admin)
+    }
+} while (!is_admin)
 
 
 let paint_mode = false;
