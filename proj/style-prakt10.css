@@ -128,4 +128,12 @@ form > button:focus {
     position: relative;
     transition: all 0.2s ease-in-out;
 }
-
+.good{
+    text-align: left;
+    color: #1a0a4b;
+    font-size: 1rem;
+    position: relative;
+    left: 0;
+    padding: 0;
+    margin: 0;
+}

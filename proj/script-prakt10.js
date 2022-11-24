@@ -26,10 +26,10 @@ function Accumulator(startingValue){
             good_price = 0;
         }
         this.value += Number(good_price);
-        let good_i = document.createElement('div');
+        let good_i = document.createElement('li');
         good_i.className = "good";
         good_i.textContent = this.truncate(good_name, 10);
-        path_cart.append(good_i);
+        path_cart.appendChild(good_i);
         path_total_price.innerHTML = Number(this.value);
         alert(good_name + " " + good_price + " теперь в корзине!");
     }
