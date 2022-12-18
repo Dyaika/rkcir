@@ -38,11 +38,30 @@
   <!--КОРЗИНА-->
   <section id="cart">
     <h3>Товары</h3>
+    <div id="filters">
+      <label for="sort">Сортировка</label><select id="sort">
+        <option value="v">По возрастанию</option>
+        <option value="u">По убыванию</option>
+      </select>
+      <label>Min
+        <input id="min" type="number" value=0>
+      </label>
+      <label>Max
+        <input id="max" type="number" value=25000>
+      </label>
+      <button id="apply">Применить</button>
+    </div>
     <div id="goods">
-      <button id="new_good">Новый товар</button>
+      <div class="good_all">
+        <button>
+        <div>Name</div>
+        <div>1999</div>
+        </button>
+      </div>
     </div>
     <h3>Корзина</h3>
     <div id="in_cart">
+      <button id="trash">🗑️</button>
       <ol id="storage">
       </ol>
     </div>
@@ -51,6 +70,12 @@
     </div>
 
   </section>
+  <div id="notifications">
+    <div id="notif-count">1</div>
+    <ol id="notif-text">
+      <li>Уведомление 1</li>
+    </ol>
+  </div>
 </main>
 <script src="./script-prakt11.js"></script>
 <footer>

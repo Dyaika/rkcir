@@ -113,6 +113,7 @@ form > button:focus {
 }
 /*КОРЗИНА*/
 #cart{
+    min-width: 20rem;
     margin: auto;
     background: var(--col-form);
     display: flex;
@@ -138,4 +139,96 @@ form > button:focus {
     left: 0;
     padding: 0;
     margin: 0;
+}
+#notif-count{
+    position: absolute;
+    text-align: center;
+    background-color: crimson;
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+    right: -0.5em;
+    top: -0.5em;
+    z-index: 2;
+}
+#notifications{
+    right: 2vw;
+    bottom: 2vw;
+    position: fixed;
+    z-index: 9999;
+    width: fit-content;
+    background: #3D99F3;
+    border-radius: 50%;
+    min-width: 5rem;
+    min-height: 5rem;
+    transition-duration: 0.3s;
+}
+#notifications:hover{
+    border-radius: 0.5rem;
+}
+#notifications::before{
+    padding: 0.5rem;
+    content: "☎";
+    font-size: 3rem;
+    background-color: #a9d7f3;
+    box-sizing: border-box;
+    position: absolute;
+    transition-duration: 0.3s;
+    width: 100%;
+    text-align: center;
+    border-radius: 30%;
+    z-index: 2;
+}
+#notifications:hover::before{
+    font-size: 1rem;
+    text-align: left;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+#notifications:hover ol{
+    display: block;
+    opacity: 1;
+    transition-duration: 1s;
+    transition-delay: 0.2s;
+}
+#notifications ol{
+    transition-duration: 0.3s;
+    display: none;
+    opacity: 0;
+    margin: auto;
+    padding: 2.5rem 0.5rem 0.5rem 2rem;
+    right: 0;
+    height: 10em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#notifications ol li:hover{
+    content: "";
+    cursor: pointer;
+    color: white;
+    transform: scale(1.1 ,1.1);
+}
+#notifications ol li{
+    transform: scale(1 ,1);
+    transition-duration: 0.2s;
+}
+#goods{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#trash{
+    width: 100%;
+}
+main button{
+    cursor: pointer;
+
+}
+#storage li {
+    display: flex;
+    flex-direction: row;
 }

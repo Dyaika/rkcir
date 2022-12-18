@@ -1,89 +1,162 @@
-
+let goods = [
+    {
+        name: "Миксер",
+        cost: 3000
+    },
+    {
+        name: "Кофемашина",
+        cost: 10000
+    },
+    {
+        name: "Блендер",
+        cost: 2500
+    },
+    {
+        name: "Микроволновка",
+        cost: 8000
+    },
+    {
+        name: "Холодильник",
+        cost: 25000
+    },
+    {
+        name: "Чайник",
+        cost: 1500
+    }
+]
 //корзина
-let good_name = "";
-let good_price = 0;
-let path_cart = document.getElementById("storage");
+let cart_goods = []
+const path_cart = document.getElementById("storage");
+const path_goods_all = document.getElementById("goods");
+const trash = document.getElementById("trash");
+const sort_opt = document.getElementById("sort");
+const min_opt = document.getElementById("min");
+const max_opt = document.getElementById("max");
+const apply_btn = document.getElementById("apply")
 let path_total_price = document.getElementById("sum");
-class Good{
-    constructor(name, price){
-        this.name = name;
-        this.price = Number(price);
-    }
-}
-class CartItem{
-    constructor(name, price, rem_btn){
-        this.good = new Good(name, price);
-        this.count_goods = 1;
-        this.rem_btn = rem_btn;
-        this.rem_btn.addEventListener('click', () => {
-            this.remG();
+let fill_func = function(arr){
+    path_goods_all.innerHTML = "";
+    for (let x in arr){
+        let cur_good = document.createElement('button')
+        cur_good.innerHTML = "<div>" + arr[x].name + "</div><div>" + arr[x].cost + "</div>"
+        cur_good.addEventListener('click', () => {
+            let obj_good = {
+                name: arr[x].name,
+                cost: arr[x].cost,
+                count: 1
+            }
+            let flag = false;
+            for (let good in cart_goods){
+                if (cart_goods[good].name === obj_good.name){
+                    cart_goods[good].count++;
+                    console.log("увеличение")
+                    console.log(obj_good)
+                    flag = true;
+                }
+            }
+            if (!flag){
+                cart_goods[cart_goods.length] = obj_good;
+                console.log("добавление нового")
+                console.log(obj_good)
+            }
+            update_cart();
         });
-    }
-    addG = function(){
-        this.count_goods++;
-    }
-    remG = function(){
-        if (this.count_goods !== 0){
-            this.count_goods--;
-            alert(this.count_goods + "");
-        }
-    }
-    getCost = function(){
-        return Number(this.count_goods) * Number(this.good.price);
+        path_goods_all.appendChild(cur_good)
     }
 }
-function Accumulator(startingValue){
-    this.value = startingValue;
-    this.arr = new CartItem[15];
-    this.truncate = function (str, maxlength){
-        if (str.length >  Number(maxlength)){
-            str = str.substring(0, maxlength - 3);
-            str += "...";
-        }
-        return str;
+let update_price = function (){
+    var valu = 0;
+    for (let x in cart_goods){
+        valu += cart_goods[x].cost * cart_goods[x].count
     }
-    this.read = function (){
-        good_name = prompt("Название товара");
-        good_price = prompt("Цена товара");
-        if (good_price < 0){
-            good_price = 0;
+    path_total_price.innerText = valu;
+}
+let update_cart = function (){
+    path_cart.innerHTML = "";
+    for (let x in cart_goods){
+        let cur_good = document.createElement('li')
+        let plus_btn = document.createElement('button')
+        plus_btn.innerText = "+"
+        let minus_btn = document.createElement('button')
+        minus_btn.innerText = "-"
+        let del_btn = document.createElement('button')
+        del_btn.innerText = "🗑️"
+        plus_btn.addEventListener('click', () =>{
+            cart_goods[x].count++
+            update_cart()
+        })
+        minus_btn.addEventListener('click', () =>{
+            if (cart_goods[x].count > 0){
+                cart_goods[x].count--
+            }
+            update_cart()
+        })
+        del_btn.addEventListener('click', () =>{
+            cart_goods[x].count = 0
+            update_cart()
+        })
+        let good_content = document.createElement('div')
+        good_content.innerHTML = cart_goods[x].name + " " + cart_goods[x].cost + " <b>" + cart_goods[x].count + "шт</b>";
+        cur_good.appendChild(minus_btn)
+        cur_good.appendChild(good_content)
+        cur_good.appendChild(plus_btn)
+        cur_good.appendChild(del_btn)
+        if (cart_goods[x].count !== 0){
+            path_cart.appendChild(cur_good)
         }
-        this.value += Number(good_price);
-        let pos = null;
-        for (var i = 0; i < 15; i++){
-            if (arr[i] != null && arr[i].good.name == good_name){
-                pos = i;
-                break;
-            } else if (arr[i] == null){
-                pos = i;
-            } else{
-                pos = 0;
+    }
+    update_price();
+}
+function compareGoods(a, b){
+    if (a.cost > b.cost) return 1
+    if (a.cost === b.cost) return 0
+    if (a.cost < b.cost) return -1
+}
+let apply_func = function (){
+    let arr = []
+    let mn = min_opt.value
+    let mx = max_opt.value
+    for (let x in goods){
+        if (goods[x].cost >= mn && goods[x].cost <= mx){
+            arr[arr.length] = {
+                name: goods[x].name,
+                cost: goods[x].cost
             }
         }
-        if (this.arr[pos] != null){
-            this.arr[pos].addG();
-        } else {
-            let good_i = document.createElement('li');
-            let del_btn = document.createElement('button');
-            del_btn.textContent = "🗑";
-            good_i.className = "good";
-            del_btn.className = "del_btn";
-            good_i.textContent = this.truncate(good_name, 10);
-            good_i.appendChild(del_btn);
-            path_cart.appendChild(good_i);
-            this.arr[pos] = new CartItem(good_name, good_price, del_btn);
-        }
-        path_total_price.innerHTML = Number(this.value);
     }
-    this.rem = function(){
-        path_cart.innerHTML = "";
+    arr.sort(compareGoods)
+    if (sort_opt.value === "u"){
+        arr.reverse()
     }
-
-    }
+    fill_func(arr)
 }
-let acc = new Accumulator(0);
-let path_new_good = document.getElementById('new_good');
-
-path_new_good.addEventListener('click', () => {
-    acc.read();
+fill_func(goods);
+update_price()
+trash.addEventListener('click', () =>{
+    cart_goods = []
+    update_cart()
 });
+apply_btn.addEventListener('click', () =>{
+    apply_func()
+})
+
+/*Уведомления*/
+let uvd = 1
+const notifs = document.getElementById("notifications")
+const notif_count = document.getElementById("notif-count")
+const notifs_text = document.getElementById("notif-text")
+notif_count.innerText = uvd;
+function plus_notif(){
+    uvd++
+    notif_count.innerText = uvd
+    let cur_uvd = document.createElement('li')
+    cur_uvd.innerText = "Уведомление " + uvd
+    notifs_text.appendChild(cur_uvd)
+}
+let timer = setInterval(plus_notif, 3000)
+notifs.addEventListener('click', () =>{
+    clearInterval(timer)
+    //alert("AAA")
+    setTimeout(() => {timer = setInterval(plus_notif, 3000)}, 10000)
+})
+
