@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+:root{
+    --col-h2: #004C95;
+    --col-h3: #3D99F3;
+    --col-form: rgba(129, 205, 218, 0.17);
+}
+h2{
+    color: #004C95;
+    font-size: 40px;
+    text-align: center;
+}
+h3{
+    color: #3D99F3;
+    margin: 0 0 0 0;
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+*, *:before, *:after{
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: "h h h"
+    "s nv a"
+    "s m a"
+    "f f f";
+}
+
+header{
+    grid-area: h;
+}
+main{
+    grid-area: m;
+    height: fit-content;
+}
+aside{
+    grid-area: s;
+}
+#ads{
+    grid-area: a;
+}
+nav{
+    grid-area: nv;
+}
+footer{
+    grid-area: f;
+}
+header, nav, main, aside, #ads{
+    padding: 1rem;
+    border: #002595 2px solid;
+    border-radius: 1rem;
+    position: relative;
+    min-height: 4em;
+    background: #0077e61a;
+}
+
+main{
+    min-height: 60vh;
+}
+footer {
+    position: relative;
+    min-height: fit-content;
+    background: #004C95;
+    text-align: center;
+    color: white;
+}
+/*Форма*/
+form input[type=text],
+form input[type=email],
+form input[type=tel] {
+    background-image: linear-gradient(90deg, white 50%, #3D99F3 50%);
+    outline: none;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: rgb(21, 38, 148);
+    background-size: 200%;
+    background-position: 0;
+    transition: 0.1s;
+}
+
+form input[type=text]::placeholder,
+form input[type=email]::placeholder,
+form input[type=tel]::placeholder {
+    color: #3D99F3;
+    font-weight: 600;
+}
+
+form input[type=text]:hover,
+form input[type=email]:hover,
+form input[type=tel]:hover {
+    background-position: 5%;
+}
+
+form input[type=text]:focus,
+form input[type=email]:focus,
+form input[type=tel]:focus {
+    background-position: 100%;
+    color: white;
+}
+
+form input[type=submit] {
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3D99F3;
+    color: white;
+    transition: 0.1s;
+}
+
+form input[type=submit]:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+}
+
+form {
+    border: 2px solid #3D99F3;
+    border-radius: 0.3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 12px;
+    column-gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+
+    grid-template-areas:
+    "item_1 item_2"
+    "item_3 item_4"
+    "item_5 item_5"
+    "item_6 .";
+}
+
+/*Сеточка*/
+#T2_item_1 {
+    grid-area: item_1;
+}
+
+#T2_item_2 {
+    grid-area: item_2;
+}
+
+#T2_item_3 {
+    grid-area: item_3;
+}
+
+#T2_item_4 {
+    grid-area: item_4;
+}
+
+#T2_item_5 {
+    grid-area: item_5;
+}
+
+#T2_item_6 {
+    grid-area: item_6;
+}
+
+#T2_item_7 {
+    grid-area: item_7;
+}
+.task_2 {
+    display: grid;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+
+    grid-template-areas:
+    "item_1 item_1 item_2 item_3"
+    "item_5 item_7 item_2 item_4"
+    "item_5 item_6 item_6 item_6";
+}
+
+.task_2 div {
+    background-color: #3D99F3;
+    border-radius: 5px;
+    padding: 10px;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.task_2 div:hover {
+    background-color: #002595;
+    color: white;
+}
+
+.task_2 div p {
+    margin-top: 10px;
+}
+
+.task_2 div img {
+    width: 100px;
+    height: 100px;
+}
+
+/*Футер*/
+
+#about_me{
+    position: relative;
+    grid-area: item_1;
+}
+#mini_nav{
+    position: relative;
+    grid-area: item_2;
+}
+#telmail{
+    position: relative;
+    grid-area: item_3;
+}
+#socials{
+    position: relative;
+    grid-area: item_4;
+}
+footer{
+    display: grid;
+    text-align: left;
+    column-gap: 50px;
+    row-gap: 10px;
+    grid-template-areas:
+    "item_1 item_2 item_3 item_4";
+}
+
+footer ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+footer a{
+    color: white;
+}
+footer a:hover{
+    color: var(--col-h3);
+}
+footer div{
+    margin: 1rem;
+}
+
+/*соцсети*/
+footer #socials ul{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.38);
+    border-radius: 3rem;
+
+}
+.about{
+    position: relative;
+}
+.links{
+    position: relative;
+}
+.links::before, .about::before, #socials::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    background-color: white;
+    width: 0.15rem;
+    height: 100%;
+    transform: translateX(-0.4rem) scaleY(0);
+}
+.links:hover::before, .about:hover::before, #socials:hover::before{
+    transform: translateX(-0.4rem) scaleY(1);
+}
+footer #socials ul li{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    list-style-type: none;
+    height: 6rem;
+    width: 6rem;
+    box-sizing: border-box;
+    border-radius: 3rem;
+    background-color: #626267;
+    overflow: hidden;
+    margin: 0.3rem;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.73);
+}
+footer #socials ul li a{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+footer #socials ul li img{
+    position: relative;
+    margin: auto;
+    z-index: 1;
+    width: 4rem;
+    height: 4rem;
+    transition-duration: 0.2s;
+}
+footer #socials ul li::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #0077ff;
+    top: 100%;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    border-radius: 50%;
+}
+footer #socials ul li:hover img,footer #socials ul li a:focus img{
+    filter: invert(100%);
+}
+footer #socials ul li:nth-child(2)::after{
+    background: linear-gradient(#38b4f4, #299dd5);
+}
+footer #socials ul li:hover::after{
+    transform: translateY(-100%);
+}
+
+/*Адаптивность*/
+@media (max-width: 1300px) {
+    body{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 4fr;
+        grid-template-areas: "h h"
+        "nv nv"
+        "s m"
+        "a f";
+    }
+    .task_2 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, 1fr);
+
+        grid-template-areas:
+        "item_1 item_1"
+        "item_2 item_3"
+        "item_2 item_4"
+        "item_5 item_5"
+        "item_6 item_7";
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "item_1 item_2"
+        "item_3 item_4"
+        "item_5 item_5";
+    }
+    footer #socials ul{
+        flex-direction: row;
+    }
+}
+@media (max-width: 800px) {
+    body{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 100%;
+        grid-template-areas: "h"
+        "nv"
+        "m"
+        "s"
+        "a"
+        "f";
+    }
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "item_1"
+        "item_2"
+        "item_3"
+        "item_4"
+        "item_5"
+        "item_6";
+    }
+    .task_2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr);
+
+        grid-template-areas:
+        "item_1"
+        "item_2"
+        "item_3"
+        "item_4"
+        "item_5"
+        "item_6"
+        "item_7";
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:
+        "item_1"
+        "item_2"
+        "item_3"
+        "item_4";
+    }
+    footer div{
+        width: 100%;
+        margin: 1em;
+    }
+
+    footer #socials ul{
+        width: 95%;
+    }
+}
