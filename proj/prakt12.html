@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FumoFumo Store</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-mobile.css">
+    <link rel="stylesheet" href="style-animation.css">
+    <link rel="stylesheet" href="style-prakt12.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+    </style>
+</head>
+<body>
+<header id="header">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+        <span></span>
+    </label>
+    <nav id="mainMenu">
+        <ul>
+            <li class="left"><a href="error-page.html">Главная</a></li>
+            <li><a href="registration.html">Регистрация</a></li>
+            <li><a href="gallery.html">Фото</a></li>
+            <li class="right"><a href="#contacts">Контакты</a></li>
+        </ul>
+    </nav>
+    <h1 id="storeName">
+        <a href="index.html"><img src="fumofumostorelogo2.png" height="100px"></a>
+    </h1>
+</header>
+<main>
+
+        <div class="firstTask">
+            <h2>Практика 12</h2>
+            <a href="#">Ссылка локальная</a>
+            <a href="https://fumofumostore.netlify.app/">Ссылка на курсовую</a>
+        </div>
+        <div class="secondTask">
+            <button onclick="addLiElements()">Создать элемент</button>
+            <ul id="list">
+
+            </ul>
+        </div>
+        <div id="thirdTask" class="thirdTask">
+            <div id="notifications">
+                <div id="notif-count">1</div>
+                <ol id="notif-text">
+                    <button style="width: 100%" onclick="addNotification()">Добавить уведомление</button>
+                </ol>
+            </div>
+
+        </div>
+    <img id="customImage" src="https://hyperspin-fe.com/uploads/monthly_2016_11/583967fb7e4b5_ProjectTouhoulogo.png.d83029e208bf90978a910dace2f922bc.png" width="100" height="100">
+</main>
+<script src="./script-prakt12.js"></script>
+
+</body>
+</html>

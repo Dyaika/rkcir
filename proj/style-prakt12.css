@@ -1,0 +1,160 @@
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0;
+}
+#header{
+    max-height: 10px;
+    overflow: hidden;
+    margin: 0;
+}
+main{
+    margin: 0;
+}
+
+.scrollable {
+    position: absolute;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    width: 100vw;
+}
+
+.firstTask {
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+}
+
+a {
+    color: #ff0058;
+}
+
+.secondTask ul {
+    list-style: none;
+    color: #002595;
+    height: 95vh;
+}
+
+.thirdTask {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.notification {
+    background: #83D4FF;
+    color: black;
+    width: 70%;
+    height: 2em;
+    padding: 10px 25px 0 5px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.notification + .notification {
+    margin-top: 2px;
+}
+
+.closable {
+    position: absolute;
+    border: none;
+    border-radius: 20px;
+    background: rgba(131, 212, 255, 0);
+    font-size: 14px;
+    width: 20px;
+    height: 20px;
+    right: 0;
+    top: 0;
+    color: red;
+}
+
+.fourthTask {
+    scroll-snap-align: start;
+    height: 100vh;
+    background: linear-gradient(#0077e61a, rgba(255, 192, 203, 0));
+}
+
+
+
+#notif-count{
+    position: absolute;
+    text-align: center;
+    background-color: crimson;
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
+    color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+    right: -0.5em;
+    top: -0.5em;
+    z-index: 2;
+}
+#notifications{
+    right: 2vw;
+    bottom: 2vw;
+    position: fixed;
+    z-index: 9999;
+    width: fit-content;
+    background: #3D99F3;
+    border-radius: 50%;
+    min-width: 5rem;
+    min-height: 5rem;
+    transition-duration: 0.3s;
+}
+#notifications:hover{
+    border-radius: 0.5rem;
+}
+#notifications::before{
+    padding: 0.5rem;
+    content: "☎";
+    font-size: 3rem;
+    background-color: #a9d7f3;
+    box-sizing: border-box;
+    position: absolute;
+    transition-duration: 0.3s;
+    width: 100%;
+    text-align: center;
+    border-radius: 30%;
+    z-index: 2;
+}
+#notifications:hover::before{
+    font-size: 1rem;
+    text-align: left;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+#notifications:hover ol{
+    display: block;
+    opacity: 1;
+    transition-duration: 1s;
+    transition-delay: 0.2s;
+}
+#notifications ol{
+    transition-duration: 0.3s;
+    display: none;
+    opacity: 0;
+    margin: auto;
+    padding: 2.5rem 0.5rem 0.5rem 2rem;
+    right: 0;
+    height: 10em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#notifications ol li:hover{
+    background: #55c1fd;
+    content: "";
+    color: white;
+    transform: scale(1.1 ,1.1);
+}
+#notifications ol li{
+    transform: scale(1 ,1);
+    transition-duration: 0.2s;
+    max-width: 100%;
+    min-height: fit-content;
+}
