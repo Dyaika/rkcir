@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FumoFumo Store</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-mobile.css">
+  <link rel="stylesheet" href="style-animation.css">
+  <link rel="stylesheet" href="style-prakt13.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+  </style>
+</head>
+<body>
+<header>
+  <input id="menu__toggle" type="checkbox" />
+  <label class="menu__btn" for="menu__toggle">
+    <span></span>
+  </label>
+  <nav id="mainMenu">
+    <ul>
+      <li class="left"><a href="error-page.html">Главная</a></li>
+      <li><a href="registration.html">Регистрация</a></li>
+      <li><a href="gallery.html">Фото</a></li>
+      <li class="right"><a href="#contacts">Контакты</a></li>
+    </ul>
+  </nav>
+  <h1 id="storeName">
+    <a href="index.html"><img src="fumofumostorelogo2.png" height="100px"></a>
+  </h1>
+</header>
+
+<main>
+  <h2>Практика 13</h2>
+  <div class="container">
+    <div id="contents" onclick="confirmRedirect(event)" class="first" style="color: black;">
+      <a href="pcb.png"><span><span>Perfect Cherry Blossom</span></span></a>
+      <a href="https://i.ytimg.com/vi/JM6uAoyVIZM/maxresdefault.jpg"><span><span>Imperishable Night</span></span></a>
+    </div>
+    <div class="gallery">
+      <div id="main_image" class="main_image"><img src="pcb.png"></div>
+      <div class="images_list" onclick="changeMainImage(event)">
+        <img src="https://i.ytimg.com/vi/5WW1L1XvNeE/maxresdefault.jpg ">
+        <img src="pcb.png">
+        <img src="https://i.ytimg.com/vi/JM6uAoyVIZM/maxresdefault.jpg">
+        <img src="pofv.png">
+      </div>
+    </div>
+    <div class="third">
+      <ul onclick="selectElements(event)" id="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+
+    <div>
+      <div id="slider" class="slider">
+        <div class="thumb"></div>
+      </div>
+    </div>
+    <div class="fifth">
+      <div class="shop">
+        <div class="item"><img
+                src="https://fumofumostore.netlify.app/images/reimuV1_5.jpg">
+          <span>Reimu Hakurei</span>
+          <span class="cost">4500¥</span>
+        </div>
+        <div class="item"><img
+                src="https://fumofumostore.netlify.app/images/marisaV1_5.jpg">
+          <span>Marisa Kirisame</span>
+          <span class="cost">4000¥</span>
+        </div>
+        <div class="item"><img
+                src="https://fumo.website/img/039.jpg">
+          <span>Youmu Konpaku</span>
+          <span class="cost">5000¥</span>
+        </div>
+      </div>
+      <div id="kart" class="kart" onmouseover="placeable = true" onmouseout="placeable = false">
+        <span id="totalCost" class="totalCost">0¥</span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <img class="fixedCharacter" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Forig07.deviantart.net%2F8834%2Ff%2F2011%2F007%2F8%2Fd%2Fyuyuko_attack_by_generalcirno-d36n1jf.gif&f=1&nofb=1&ipt=849aae1b195fdf9504fe73abe3031a79fa7055c289af42da62adc69fb6bf9ba4&ipo=images">
+    <span id="inCartEvent">В корзине!</span>
+  </div>
+</main>
+<script src="./script-prakt13.js"></script>
+<footer>
+  <address>
+    <h3 id="contacts">Контакты</h3>
+    <a class="tel" href="tel: +7 977 281 08 23">Позвонить</a>
+    <a class="email" href="mailto:razchurik@gmail.com">Написать</a>
+  </address>
+  <hr>
+  <a id="toTop" href="#storeName">--В начало--</a>
+</footer>
+</body>
+</html>
