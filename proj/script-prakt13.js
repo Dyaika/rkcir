@@ -1,9 +1,9 @@
 //Redirection confirm
 function confirmRedirect(e) {
     let link = e.target;
-    if (e.target.tagName !== "a")
-        link = e.target.closest("a");
-    if (link.tagName && !confirm(`Перейти на страницу ${link.host}?`))
+    if (e.target.tagName !== "A")
+        link = e.target.closest("A");
+    if (link.tagName && !confirm('Перейти на страницу ${link.host}?`))
         e.preventDefault();
 }
 
